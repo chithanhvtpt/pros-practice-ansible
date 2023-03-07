@@ -1,0 +1,15 @@
+- name: deploy to server
+  hosts: all
+  vars_files:
+    - ../variables/deploy-vars.yml
+
+  tasks:
+    - name: clone to staging directory
+      ansible.builtin.git:
+        repo: 'https://gitlab.com/d-outsourcing/1009-tenmu/whitelign.git'
+        dest: "{{ path_to_staging_directory }}"
+
+    - name: clone to production directory
+      ansible.builtin.git:
+        repo: 'https://gitlab.com/d-outsourcing/1009-tenmu/whitelign.git'
+        dest: "{{ path_to_production_directory }}"

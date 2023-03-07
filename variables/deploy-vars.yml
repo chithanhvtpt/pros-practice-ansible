@@ -1,0 +1,2 @@
+path_to_staging_directory: '/var/www/whitelign/staging'
+path_to_production_directory: '/var/www/whitelign/prod'
